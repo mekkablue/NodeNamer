@@ -28,7 +28,7 @@ class NodeNamer (PalettePlugin):
 			'de': u'NodeNamer',
 			'es': u'Nombrar los nodos',
 			'fr': u'Nommer les nœuds',
-			'zh_CN': u'锚点名称',
+			'zh': u'锚点名称',
 		})
 		
 		# Load .nib dialog (without .extension)
@@ -65,7 +65,7 @@ class NodeNamer (PalettePlugin):
 						'de': u'Keine Punkte ausgewählt',
 						'es': u'Ningún nodo seleccionado',
 						'fr': u'Aucun nœud selectionné',
-						'zh_CN': u'未选中任何锚点',
+						'zh': u'未选中任何锚点',
 					}))
 					self.nodeNameField.setStringValue_("")
 					
@@ -84,7 +84,7 @@ class NodeNamer (PalettePlugin):
 							"" if numberOfSelectedNodes==1 else "s",
 							"" if numberOfSelectedNodes==1 else "s",
 							),
-						'zh_CN': u'未命名锚点',
+						'zh': u'未命名锚点',
 					}))
 					nodeName = tuple(uniqueNodeNames)[0]
 					if not nodeName:
@@ -97,7 +97,7 @@ class NodeNamer (PalettePlugin):
 						'de': u'Mehrere Namen',
 						'es': u'Nombres múltiples',
 						'fr': u'Multiples noms',
-						'zh_CN': u'多个名称',
+						'zh': u'多个名称',
 					}))
 					self.nodeNameField.setStringValue_("")
 	
@@ -137,7 +137,7 @@ class NodeNamer (PalettePlugin):
 		try:
 			self._sortID = id
 		except Exception as e:
-			self.logToConsole( "setSortID_: %s" % str(e) )
+			self.logToConsole( "NodeNamer setSortID_: %s" % str(e) )
 	
 	@objc.python_method
 	def sortID(self):
