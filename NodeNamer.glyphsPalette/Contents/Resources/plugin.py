@@ -26,7 +26,9 @@ class NodeNamer (PalettePlugin):
 		self.name = Glyphs.localize({
 			'en': u'Node Namer',
 			'de': u'NodeNamer',
-			'es': u'Nombreador de Nodos',
+			'es': u'Nombrar los nodos',
+			'fr': u'Nommer les nœuds',
+			'zh_CN': u'锚点名称',
 		})
 		
 		# Load .nib dialog (without .extension)
@@ -59,17 +61,30 @@ class NodeNamer (PalettePlugin):
 				
 				if numberOfSelectedNodes == 0:
 					self.nodeNameField.setPlaceholderString_(Glyphs.localize({
-						'en': u'No nodes selected.',
-						'de': u'Keine Punkte ausgewählt.',
-						'es': u'Ningún nodo seleccionado.',
+						'en': u'No nodes selected',
+						'de': u'Keine Punkte ausgewählt',
+						'es': u'Ningún nodo seleccionado',
+						'fr': u'Aucun nœud selectionné',
+						'zh_CN': u'未选中任何锚点',
 					}))
 					self.nodeNameField.setStringValue_("")
 					
 				elif numberOfUniqueNodeNames == 1:
 					self.nodeNameField.setPlaceholderString_( Glyphs.localize({
-						'en': u'Empty node name%s.' % ("s" if numberOfSelectedNodes>1 else ""),
-						# 'de': u'Kein%s.' % ("en" if len(theseGlyphs)>1 else ""),
-						# 'es': u'Nota%s vacía%s.' % ("s" if len(theseGlyphs)>1 else "", "s" if len(theseGlyphs)>1 else ""),
+						'en': u'Empty node name%s' % ("" if numberOfSelectedNodes==1 else "s"),
+						'de': u'Kein%s Punktname%s gesetzt' % (
+							"" if numberOfSelectedNodes==1 else "e",
+							"" if numberOfSelectedNodes==1 else "n",
+							),
+						'es': u'Nota%s vacía%s.' % (
+							"" if numberOfSelectedNodes==1 else "s",
+							"" if numberOfSelectedNodes==1 else "s",
+							),
+						'fr': u'Nom%s vide%s' % (
+							"" if numberOfSelectedNodes==1 else "s",
+							"" if numberOfSelectedNodes==1 else "s",
+							),
+						'zh_CN': u'未命名锚点',
 					}))
 					nodeName = tuple(uniqueNodeNames)[0]
 					if not nodeName:
@@ -78,9 +93,11 @@ class NodeNamer (PalettePlugin):
 		
 				else:
 					self.nodeNameField.setPlaceholderString_(Glyphs.localize({
-						'en': u'Multiple values.',
-						'de': u'Mehrere Werte.',
-						'es': u'Valores múltiples.',
+						'en': u'Multiple names',
+						'de': u'Mehrere Namen',
+						'es': u'Nombres múltiples',
+						'fr': u'Multiples noms',
+						'zh_CN': u'多个名称',
 					}))
 					self.nodeNameField.setStringValue_("")
 	

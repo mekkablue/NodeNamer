@@ -2,7 +2,7 @@
 
 This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).
 
-*Node Namer* (de: *NodeNamer,* es: *Nombreador de nodos*) is a small item in the Palette sidebar (Cmd-Opt-P) that allows you to set and delete node names.
+*Node Namer* (de: *NodeNamer*, es: *Nombrar los nodos*, fr: *Nommer les nœuds*, zh: 锚点名称) is a small item in the Palette sidebar (Cmd-Opt-P) that allows you to set and delete node names.
 
 ![NodeNamer in action](NodeNamer.png)
 
