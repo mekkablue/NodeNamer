@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField toolTip="Select any number of nodes in Edit View and type a new name here." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYW-XU-hWb">
-                    <rect key="frame" x="-1" y="0.0" width="163" height="26"/>
+                    <rect key="frame" x="-1" y="-1" width="165" height="26"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" toolTip="Select any number of nodes in Edit View and type a new name here." placeholderString="Name for selected Node(s)" drawsBackground="YES" id="zlA-Fc-lp0">
                         <font key="font" usesAppearanceFont="YES"/>
