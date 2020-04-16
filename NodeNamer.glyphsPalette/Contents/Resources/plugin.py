@@ -122,24 +122,7 @@ class NodeNamer (PalettePlugin):
 				for thisNode in selectedNodes:
 					thisNode.name=self.nodeNameField.stringValue()
 	
-
-	
 	@objc.python_method
 	def __file__(self):
 		"""Please leave this method unchanged"""
 		return __file__
-	
-	# Temporary Fix
-	# Sort ID for compatibility with v919:
-	_sortID = 0
-	@objc.python_method
-	def setSortID_(self, id):
-		try:
-			self._sortID = id
-		except Exception as e:
-			self.logToConsole( "NodeNamer setSortID_: %s" % str(e) )
-	
-	@objc.python_method
-	def sortID(self):
-		return self._sortID
-	

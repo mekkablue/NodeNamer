@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleDisplayName</key>
-	<string>NodeNamer</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>plugin</string>
 	<key>CFBundleIdentifier</key>
@@ -14,25 +12,23 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>NodeNamer</string>
-	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/mekkablue/NodeNamer/master/NodeNamer.glyphsPalette/Contents/Info.plist</string>
 	<key>productPageURL</key>
 	<string>https://github.com/mekkablue/NodeNamer</string>
 	<key>productReleaseNotes</key>
-	<string>Adaptable text entry field</string>
+	<string>Update to latest API.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright, Rainer Erich Scheichelbauer, 2020</string>
 	<key>NSPrincipalClass</key>
 	<string>NodeNamer</string>
 	<key>PyMainFileNames</key>
 	<array>
-		<string>../MacOS/main.py</string>
+		<string>plugin.py</string>
 	</array>
 </dict>
 </plist>
