@@ -27,8 +27,9 @@ class NodeNamer (PalettePlugin):
 			'en': u'Node Namer',
 			'de': u'NodeNamer',
 			'es': u'Nombrar los nodos',
+			'pt': u'Nomear os nós',
 			'fr': u'Nommer les nœuds',
-			'zh': u'锚点名称',
+			'zh': u'节点名称',
 		})
 		
 		# Load .nib dialog (without .extension)
@@ -64,8 +65,9 @@ class NodeNamer (PalettePlugin):
 						'en': u'No nodes selected',
 						'de': u'Keine Punkte ausgewählt',
 						'es': u'Ningún nodo seleccionado',
+						'pt': u'Nenhum nó selecionado',
 						'fr': u'Aucun nœud selectionné',
-						'zh': u'未选中任何锚点',
+						'zh': u'未选中任何节点',
 					}))
 					self.nodeNameField.setStringValue_("")
 					
@@ -80,11 +82,15 @@ class NodeNamer (PalettePlugin):
 							"" if numberOfSelectedNodes==1 else "s",
 							"" if numberOfSelectedNodes==1 else "s",
 							),
+						'pt': u'Nome%s vazio%s' % (
+							"" if numberOfSelectedNodes==1 else "s",
+							"" if numberOfSelectedNodes==1 else "s",
+							),
 						'fr': u'Nom%s vide%s' % (
 							"" if numberOfSelectedNodes==1 else "s",
 							"" if numberOfSelectedNodes==1 else "s",
 							),
-						'zh': u'未命名锚点',
+						'zh': u'未命名节点',
 					}))
 					nodeName = tuple(uniqueNodeNames)[0]
 					if not nodeName:
@@ -96,6 +102,7 @@ class NodeNamer (PalettePlugin):
 						'en': u'Multiple names',
 						'de': u'Mehrere Namen',
 						'es': u'Nombres múltiples',
+						'pt': u'Nomes múltiplos',
 						'fr': u'Multiples noms',
 						'zh': u'多个名称',
 					}))
